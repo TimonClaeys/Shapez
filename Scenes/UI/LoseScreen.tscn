@@ -1,0 +1,71 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Themes/Style.tres" type="Theme" id=1]
+[ext_resource path="res://Assets/Fonts/new_dynamicfont.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Scripts/LoseScreen.cs" type="Script" id=3]
+
+[node name="LoseScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -218.0
+margin_top = -191.0
+margin_right = 218.0
+margin_bottom = 191.0
+custom_constants/separation = 13
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+margin_right = 436.0
+margin_bottom = 72.0
+text = "You lost"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScoreLabel" type="Label" parent="VBoxContainer"]
+margin_top = 85.0
+margin_right = 436.0
+margin_bottom = 157.0
+custom_fonts/font = ExtResource( 2 )
+text = "Score : 40"
+align = 1
+
+[node name="BestLabel" type="Label" parent="VBoxContainer"]
+margin_top = 170.0
+margin_right = 436.0
+margin_bottom = 242.0
+text = "Best : 40"
+align = 1
+
+[node name="PlayAgainButton" type="Button" parent="VBoxContainer"]
+margin_top = 255.0
+margin_right = 436.0
+margin_bottom = 333.0
+text = "Play again"
+
+[node name="LevelLabel" type="Label" parent="VBoxContainer"]
+margin_top = 346.0
+margin_right = 436.0
+margin_bottom = 418.0
+text = "Level 3"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="VBoxContainer/PlayAgainButton" to="." method="OnPlayAgainButtonPressed"]
