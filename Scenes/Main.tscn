@@ -11,6 +11,7 @@ script = ExtResource( 6 )
 
 [node name="Lock" parent="." instance=ExtResource( 1 )]
 position = Vector2( 360, 540 )
+scale = Vector2( 2, 2 )
 
 [node name="Pointer" parent="Lock" instance=ExtResource( 2 )]
 rotation = -1.63886
