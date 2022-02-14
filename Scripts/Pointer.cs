@@ -19,7 +19,7 @@ public class Pointer : Node2D
     {
         _pointerArea = GetNode<Area2D>("Key/Area2D");
 
-        Random random =  new Random();
+        Random random = new Random();
 
 
 
